@@ -47,7 +47,7 @@ jobs:
       working-directory: ${{ env.ROOT_PATH }}
 
     - name: terraform apply
-      if: ${{ github.ref == 'ref/heads/test-git' }}
+      if: ${{ github.ref == 'refs/remotes/origin/test-git' }}
       run: terraform apply --auto-approve 
       working-directory: ${{ env.ROOT_PATH }}
 
