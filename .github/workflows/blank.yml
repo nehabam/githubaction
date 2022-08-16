@@ -45,5 +45,7 @@ jobs:
     - name: terraform Plan
       run: terraform plan 
       working-directory: ${{ env.ROOT_PATH }}
-
+    - name: terraform apply
+      run: terraform apply --auto-approve 
+      working-directory: ${{ env.ROOT_PATH }}
 
