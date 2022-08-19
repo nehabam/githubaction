@@ -47,7 +47,7 @@ jobs:
       run: terraform init
       working-directory: ${{ env.ROOT_PATH }}
     - name: terraform Plan
-      run: terraform plan  -out=plan.tfplan -var="env"=${{secrets.env}}
+      run: terraform plan  -out=plan.tfplan -var="env"=${{secrets.ENV}}
       working-directory: ${{ env.ROOT_PATH }}
 
 
@@ -84,5 +84,5 @@ jobs:
 
     - name: terraform apply
       if: ${{ github.ref == 'refs/heads/test-git'  &&  github.event_name == 'push'}}
-      run: terraform apply --auto-approve 
+      run: terraform apply -var="env"=${{secrets.ENV}} --auto-approve 
       working-directory: ${{ env.ROOT_PATH }}
