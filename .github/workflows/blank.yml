@@ -86,5 +86,5 @@ jobs:
 
     - name: terraform apply
       if: ${{ github.ref == 'refs/heads/test-git'  &&  github.event_name == 'push'}}
-      run: terraform apply -var="env"=${{env.env_name}} --auto-approve 
+      run: terraform apply -var="env"=${GITHUB_ENV} --auto-approve 
       working-directory: ${{ env.ROOT_PATH }}
