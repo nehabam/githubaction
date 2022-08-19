@@ -1,5 +1,5 @@
 resource "azurerm_resource_group" "example" {
-  name     = ${{env.name}}
+  name     = "var.name${{env.env}}"
   location = "West Europe"
   tag = "prod"
 }
