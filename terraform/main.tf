@@ -1,7 +1,8 @@
 resource "azurerm_resource_group" "example" {
-  name     = "exampless"
+  name     = var.name
   location = "West Europe"
 }
+
 
 # Configure the Azure provider
 terraform {
@@ -17,4 +18,8 @@ terraform {
 
 provider "azurerm" {
   features {}
+}
+
+variable "name" {
+  default = "myTFResourceGroup"
 }
