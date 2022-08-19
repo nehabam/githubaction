@@ -60,7 +60,7 @@ jobs:
     needs: terraform_plan
     environment: dev
     env:
-      env_name: dev
+      env_name: dev1
     
     defaults:
       run:
