@@ -23,11 +23,11 @@ provider "azurerm" {
 }
 
 variable "name" {
-  default = "myTFResourceesGroup"
+  default = "myTFResourcGroup"
 }
 
 variable "env" {
-  default = "myTFResourceesGroup"
+  default = "tt"
 }
 
 
