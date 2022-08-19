@@ -47,7 +47,7 @@ jobs:
       run: terraform init
       working-directory: ${{ env.ROOT_PATH }}
     - name: terraform Plan
-      run: terraform plan  -out=plan.tfplan
+      run: terraform plan  -out=plan.tfplan -var="env"=${{secrets.env}}
       working-directory: ${{ env.ROOT_PATH }}
 
 
