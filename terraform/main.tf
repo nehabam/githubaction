@@ -1,5 +1,5 @@
 resource "azurerm_resource_group" "example" {
-  name     = "${var.name}"
+  name     = "${var.name}-${var.env}"
   location = "West Europe"
  
 }
@@ -25,4 +25,9 @@ provider "azurerm" {
 variable "name" {
   default = "myTFResourceesGroup"
 }
+
+variable "env" {
+  default = "myTFResourceesGroup"
+}
+
 
