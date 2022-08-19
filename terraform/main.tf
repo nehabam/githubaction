@@ -1,7 +1,9 @@
 resource "azurerm_resource_group" "example" {
-  name     = var.name
+  name     = ${{env.name}}
   location = "West Europe"
+  tag = "prod"
 }
+
 
 
 # Configure the Azure provider
@@ -23,3 +25,4 @@ provider "azurerm" {
 variable "name" {
   default = "myTFResourceesGroup"
 }
+

@@ -19,6 +19,7 @@ env:
       ARM_CLIENT_SECRET: ${{secrets.AZURE_CLIENT_SECRET}}
       ARM_SUBSCRIPTION_ID: ${{secrets.AZURE_SUBSCRIPTION_ID}}
       ARM_TENANT_ID: ${{secrets.AZURE_TENANT_ID}}
+      name: 'test'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
