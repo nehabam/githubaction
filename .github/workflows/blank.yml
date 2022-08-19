@@ -19,7 +19,7 @@ env:
       ARM_CLIENT_SECRET: ${{secrets.AZURE_CLIENT_SECRET}}
       ARM_SUBSCRIPTION_ID: ${{secrets.AZURE_SUBSCRIPTION_ID}}
       ARM_TENANT_ID: ${{secrets.AZURE_TENANT_ID}}
-      env: ${{secrets.env}}
+      var.env: ${{secrets.env}}
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -41,7 +41,7 @@ jobs:
       uses: hashicorp/setup-terraform@v1
       with:
         cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
-        env: ${{ env.env }}
+        env: ${{ env.var.env }}
 
     - name: terraform init
       run: terraform init
@@ -72,7 +72,7 @@ jobs:
       with:
 
         cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
-        env: ${{ env.env }}
+        env: ${{ env.var.env }}
 
     - name: terraform init
       run: terraform init
