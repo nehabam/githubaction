@@ -27,7 +27,7 @@ variable "name" {
 }
 
 variable "env" {
-
+default = "tj"
 }
 
 
