@@ -21,5 +21,5 @@ provider "azurerm" {
 }
 
 variable "name" {
-  default = "myTFResourceGroup"
+  default = "myTFResourceesGroup"
 }
