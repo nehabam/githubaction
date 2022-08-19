@@ -61,7 +61,7 @@ jobs:
     environment: test
     
     env: 
-        ENV: ${{ env.ENV }}
+        ENV: ${{ secrets.ENV }}
     defaults:
       run:
         shell: bash
